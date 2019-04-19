@@ -6,7 +6,7 @@ const mongoose = require('mongoose');
 const path = require('path');
 
 const albumRoutes = require('./api/routes/albums');
-const userRoutes=require('./api/routes/user');
+const userRoutes = require('./api/routes/user');
 
 mongoose.connect(
     'mongodb+srv://node-headhunter:' + 
