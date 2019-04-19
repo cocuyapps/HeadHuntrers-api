@@ -28,6 +28,24 @@ router.get('/', (req,res) => {
     }
 });
 
+router.get('/:id', (req, res, next) => {
+    Album.findById(req.params.id)
+    .exec()
+    .then(album => {
+        if (!album) {
+            return res.status(404).json({
+                message: 'Album not found'
+            });
+        }
+        res.status(200).json(album);
+    })
+    .catch(err => {
+        res.status(500).json({
+            error: EvalError
+        });
+    });
+});
+
 router.get('/genres', (req,res) => {
     Album.find().distinct('genre').exec()
         .then(docs => {
