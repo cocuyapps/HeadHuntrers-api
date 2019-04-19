@@ -9,9 +9,7 @@ const albumRoutes = require('./api/routes/albums');
 const userRoutes = require('./api/routes/user');
 
 mongoose.connect(
-    'mongodb+srv://node-headhunter:' + 
-    process.env.MONGO_ATLAS_PW + 
-    '@cluster0-8btrp.mongodb.net/test?retryWrites=true',
+    'mongodb+srv://node-headhunter:admin@cluster0-8btrp.mongodb.net/test?retryWrites=true',
     { 
         useNewUrlParser: true
     }
