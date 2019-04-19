@@ -1,0 +1,1 @@
+db.albums.update({},{$set:{"likes":"0", "genre":"Country"}},{multi:true});
