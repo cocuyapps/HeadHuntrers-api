@@ -41,7 +41,7 @@ router.get('/:id', (req, res, next) => {
     })
     .catch(err => {
         res.status(500).json({
-            error: EvalError
+            error: err
         });
     });
 });
