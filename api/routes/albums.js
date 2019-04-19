@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const mongoose = require('mongoose');
+const checkAuth = require('../middleware/check-auth');
 
 const Album = require('../models/albums');
 
@@ -41,7 +42,7 @@ router.get('/genres', (req,res) => {
         });
 });
 
-router.post('/', (req, res, next) => {
+router.post('/', checkAuth, (req, res, next) => {
     const {title,artist,url,image,thumbnail_image,songs,genre,likes} = req.body;
     const album = new Album({
         _id: new mongoose.Types.ObjectId(),
@@ -64,7 +65,7 @@ router.post('/', (req, res, next) => {
     });
 });
 
-router.put('/:id', (req,res) => {
+router.put('/:id', checkAuth, (req,res) => {
     const {likes} = req.body;
     const id = req.params.id;
     console.log(req.body);
@@ -76,7 +77,7 @@ router.put('/:id', (req,res) => {
     });
 });
 
-router.delete('/:id', (req, res, next) => {
+router.delete('/:id', checkAuth, (req, res, next) => {
     Album.deleteOne({ _id: req.params.id })
     .exec()
     .then(result => {
