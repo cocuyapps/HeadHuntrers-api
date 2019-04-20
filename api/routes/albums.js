@@ -65,7 +65,7 @@ router.get('/:id', (req, res, next) => {
 });
 
 router.post('/', checkAuth, (req, res, next) => {
-    const {title,artist,url,image,thumbnail_image,songs,genre,likes} = req.body;
+    const {title,artist,url,image,thumbnail_image,songs,genre,likes, description} = req.body;
     const album = new Album({
         _id: new mongoose.Types.ObjectId(),
         title,
@@ -75,7 +75,8 @@ router.post('/', checkAuth, (req, res, next) => {
         image,
         songs,
         genre,
-        likes
+        likes,
+        description
     });
     album.save()
     .then(result => {

@@ -18,6 +18,7 @@ var AlbumSchema = new mongoose.Schema({
     songs: [SongSchema],
     likes: Number,
     genre: String,
+    description: String
 });
 
 module.exports = mongoose.model('albums', AlbumSchema);
