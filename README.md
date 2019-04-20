@@ -6,6 +6,9 @@ _Restful Api repository for the HeadHunters mobile app_
 _Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
 
 
+## Documentation :page_facing_up:
+_Please visit the following page: https://app.swaggerhub.com/apis-docs/HeadHunters/HeadHunters-API/1.0.0 to see the api documentation_
+
 ### Pre-requisitos 📋
 
 _Tener instalado node.js y un IDE de tu preferencia_
