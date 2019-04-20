@@ -14,14 +14,18 @@ router.get('/', (req,res) => {
         const regex = new RegExp(genre,'i');
         Album.find({genre: regex}).sort({likes: -1}).skip(offset).limit(limit).exec()
             .then(docs => {
-                res.status(200).send(docs);
+                res.status(200).json({
+                    albums: docs
+                });
             }).catch(err =>{
                 res.status(500).send({error: err});
             });
     } else {
         Album.find().sort({likes: -1}).skip(offset).limit(limit).exec()
         .then(docs => {
-            res.status(200).send(docs);
+            res.status(200).json({
+                albums: docs
+            });
         }).catch(err =>{
             res.status(500).send({error: err});
         });
