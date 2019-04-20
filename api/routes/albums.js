@@ -28,6 +28,20 @@ router.get('/', (req,res) => {
     }
 });
 
+router.get('/genres', (req,res) => {
+    Album.find().distinct('genre').exec()
+        .then(docs => {
+            const genres = [];
+            docs.forEach(doc => {
+                genres.push(doc);
+            });
+            res.status(200).send(genres);
+        })
+        .catch(err => {
+            res.status(500).send({error: err});
+        });
+});
+
 router.get('/:id', (req, res, next) => {
     Album.findById(req.params.id)
     .exec()
@@ -44,20 +58,6 @@ router.get('/:id', (req, res, next) => {
             error: err
         });
     });
-});
-
-router.get('/genres', (req,res) => {
-    Album.find().distinct('genre').exec()
-        .then(docs => {
-            const genres = [];
-            docs.forEach(doc => {
-                genres.push(doc);
-            });
-            res.status(200).send(genres);
-        })
-        .catch(err => {
-            res.status(500).send({error: err});
-        });
 });
 
 router.post('/', checkAuth, (req, res, next) => {
