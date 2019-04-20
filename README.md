@@ -1,6 +1,6 @@
 # HeadHuntrers-api
 
-_ReRestful Api repository for the HeadHunters mobile app_
+_Restful Api repository for the HeadHunters mobile app_
 
 ## Comenzando 🚀
 
