@@ -1,5 +1,6 @@
 # HeadHuntrers-api
-_Restful Api repository for the HeadHunters mobile app_
+
+_ReRestful Api repository for the HeadHunters mobile app_
 
 ## Comenzando 🚀
 
@@ -58,3 +59,7 @@ _Herramientas utilizadas_
 
 ---
 ⌨️ con ❤️ por [Cocuyapps](https://github.com/cocuyapps) :hamster:
+=======
+Api repository for the HeadHunters mobile app
+
+Please visit the following page: https://app.swaggerhub.com/apis-docs/HeadHunters/HeadHunters-API/1.0.0 to see the api documentation

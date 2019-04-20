@@ -42,6 +42,24 @@ router.get('/genres', (req,res) => {
         });
 });
 
+router.get('/:id', (req, res, next) => {
+    Album.findById(req.params.id)
+    .exec()
+    .then(album => {
+        if (!album) {
+            return res.status(404).json({
+                message: 'Album not found'
+            });
+        }
+        res.status(200).json(album);
+    })
+    .catch(err => {
+        res.status(500).json({
+            error: err
+        });
+    });
+});
+
 router.post('/', checkAuth, (req, res, next) => {
     const {title,artist,url,image,thumbnail_image,songs,genre,likes} = req.body;
     const album = new Album({
