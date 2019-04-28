@@ -37,7 +37,7 @@ router.get('/genres', (req,res) => {
         .then(docs => {
             const genres = [];
             docs.forEach(doc => {
-                genres.push({ genre: doc, genreimg: `https://headhuntersapp-api.herokuapp.com/${doc}.jpg`});
+                genres.push({ genre: doc, genreimg: `https://headhuntersapp-api.herokuapp.com/${doc.toLowerCase()}.jpg`});
             });
             res.status(200).json({
                 genres: genres
