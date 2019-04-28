@@ -37,9 +37,11 @@ router.get('/genres', (req,res) => {
         .then(docs => {
             const genres = [];
             docs.forEach(doc => {
-                genres.push(doc);
+                genres.push({ genre: doc, genreimg: `https://headhuntersapp-api.herokuapp.com/${doc}.jpg`});
             });
-            res.status(200).send(genres);
+            res.status(200).json({
+                genres: genres
+            });
         })
         .catch(err => {
             res.status(500).send({error: err});
