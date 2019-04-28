@@ -121,5 +121,29 @@ db.albums.insertMany([
     "likes": 0,
     "genre": "Country",
     "description": "1989 is the fifth studio album by American singer-songwriter Taylor Swift, released on October 27, 2014 through Big Machine Records. Songwriting for the album commenced in mid-2013, during which time contemporary critics had noted her fourth studio album Red for its mild departure from Swift's signature country sound and incorporation of straightforward pop production, a result of her collaborations with Swedish producers Max Martin and Shellback. For Red's follow-up, the singer decided to completely forsake her trademark country styles and was inspired by pop music of the 1980s for its experimentation with synthesizers and overlapped vocals. Martin served as executive producer alongside Swift in overseeing the coalition of the album."
+  },
+  {
+    "title": "Hopes and Fears",
+    "artist": "Keane",
+    "url": "https://www.amazon.com/1989-Taylor-Swift/dp/B00MRHANNI",
+    "image": "https://img.discogs.com/fi0q5BXg995l6ElKVgmaaYlOwNE=/fit-in/300x300/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-1533283-1484042671-7932.jpeg.jpg",
+    "thumbnail_image": "https://images-na.ssl-images-amazon.com/images/I/71w1BmR9igL.png",
+    "songs":[
+      {
+        "artist": "Keane",
+        "title": "Somewhere Only We Know",
+        "albumArtUrl":"https://img.discogs.com/fi0q5BXg995l6ElKVgmaaYlOwNE=/fit-in/300x300/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-1533283-1484042671-7932.jpeg.jpg",
+        "audioUrl": "https://headhuntersapp-api.herokuapp.com/Keane-SomewhereOnlyWeKnow.mp3"
+      },
+      {
+        "artist": "Keane",
+        "title": "Everybody's Changing",
+        "albumArtUrl":"https://img.discogs.com/fi0q5BXg995l6ElKVgmaaYlOwNE=/fit-in/300x300/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-1533283-1484042671-7932.jpeg.jpg",
+        "audioUrl": "https://headhuntersapp-api.herokuapp.com/Keane-EverybodysChanging.mp3"
+      }
+    ],
+    "likes": 0,
+    "genre": "Rock",
+    "description": "Hopes and Fears is the debut studio album by the English alternative rock band Keane. It was released on 10 May 2004 in the United Kingdom and topped the UK Albums Chart upon release. It was the second best-selling British album of 2004, behind the Scissor Sisters' self-titled debut album, and has since been certified 9× Platinum by the BPI. The album returned to the top of the charts after winning a Brit Award for Best Album in February 2005."
   }
 ]);
